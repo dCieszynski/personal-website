@@ -1,7 +1,16 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./components/Layout";
 
 function App() {
-  return <div className="text-4xl font-imb">Hello world</div>;
+  return (
+    <Routes>
+      <Route path="" element={<Layout />}>
+        <Route path="" element={<Home />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
