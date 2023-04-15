@@ -6,8 +6,9 @@ export default {
       fontFamily: {
         imb: ["IBM Plex Mono", "sans-serif"],
       },
-      dropShadow: {
+      boxShadow: {
         brutal: "4px 4px 0px #000",
+        "brutal-white": "4px 4px 0px #fff",
       },
       colors: {
         "personal-orange-2": "#ffce2f",
