@@ -44,11 +44,20 @@ export default {
             opacity: 1,
           },
         },
+        apear: {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
       },
       animation: {
         typing: "typing 2s steps(40, end) alternate, .7s",
         "move-from-right": "move-from-right 1s ease-out",
         "move-from-left": "move-from-left 1s ease-out",
+        apear: "apear 1s ease-out",
       },
     },
     plugins: [],

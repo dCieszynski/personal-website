@@ -1,9 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-weight: 400;
-  src: url("./fonts/IBMPlexMono-Regular.ttf");
-}
