@@ -3,6 +3,7 @@ import { FaHtml5, FaReact, FaSass } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiTypescript } from "react-icons/si";
 import RowList from "../components/RowList/RowList";
 import aboutUrl from "../assets/about.svg";
+import PageHeader from "../components/PageHeader";
 
 function About() {
   const techList = [
@@ -49,7 +50,7 @@ function About() {
       <div className="md:max-w-[960px] flex flex-col items-center gap-10 font-imb pt-8">
         <div className="flex flex-col items-center gap-10">
           <div>
-            <h1 className="font-[700] text-[2rem] absolute animate-move-from-left">About</h1>
+            <PageHeader content="About" />
             <p className="font-normal pt-12 animate-apear">
               Aspiring software developer for now mainly focused on frontend development. I have the most experience with React.js with Typescript.
               Big fan of Tailwind CSS. Currently learning Next.js. In the future I would like to learn more about backend development. I am currently
