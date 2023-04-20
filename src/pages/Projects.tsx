@@ -1,44 +1,41 @@
 import React from "react";
-import { AiOutlineGithub } from "react-icons/ai";
-import { FaGlobe } from "react-icons/fa";
 import PageHeader from "../components/PageHeader";
-import pawUrl from "../assets/paw.png";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import { TProjectCardContext } from "../types";
+import pawurl from "../assets/paw.png";
 
 function Projects() {
+  const projects: TProjectCardContext[] = [
+    {
+      title: "Paw",
+      description: "Paw is a Tinder like app for adopting pets from animal shelters",
+      repository: "https://github.com/dCieszynski/paw-app",
+      live: "https://main--dcieszynskipaw.netlify.app/",
+      image: pawurl,
+    },
+  ];
+
   return (
-    <main className="self-start flex flex-col items-center gap-12">
-      <div className="md:max-w-[960px] flex flex-col items-center gap-10 font-imb pt-8">
-        <div className="w-full h-12">
+    <main className="self-start w-full flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center w-full pt-8">
+        <div className="w-full">
           <PageHeader content="Projects" />
-          <div className="pt-16">
-            <div className="w-[272px] h-[360px] bg-personal-orange-1 border-4 border-black shadow-brutal rounded">
-              <h2 className="text-2xl font-bold border-b-4 border-b-black p-2">Paw</h2>
-              <div className="h-[210px] border-b-4 border-b-black">
-                <img className="w-full h-full object-cover" src={pawUrl} alt="Paw" />
-              </div>
-              <p className="px-2 pt-2 font-imb text-xs font-bold">Paw is a Tinder like app for adopting pets from animal shelters</p>
-              <div className="py-2 px-6 flex justify-between">
-                <div className="flex items-center font-imb text-xs font-bold">
-                  Repository:
-                  <a
-                    className="w-8 h-8 text-2xl flex justify-center items-center bg-white rounded-2xl shadow-brutal"
-                    href="https://github.com/dCieszynski/paw-app"
-                  >
-                    <AiOutlineGithub />
-                  </a>
-                </div>
-                <div className="flex items-center font-imb text-xs font-bold">
-                  Live:
-                  <a
-                    className="w-8 h-8 text-2xl flex justify-center items-center bg-white rounded-2xl shadow-brutal"
-                    href="https://main--dcieszynskipaw.netlify.app/"
-                  >
-                    <FaGlobe />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="flex flex-col md:flex-row md:flex-wrap items-center md:max-w-[1280px] md:justify-center gap-8 pt-16 animate-apear">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              data={project}
+              content={
+                <>
+                  <ProjectCard.Header />
+                  <ProjectCard.Image />
+                  <ProjectCard.Description />
+                  <ProjectCard.Links />
+                </>
+              }
+            />
+          ))}
         </div>
       </div>
     </main>
