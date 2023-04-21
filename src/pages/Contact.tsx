@@ -10,7 +10,7 @@ function Contact() {
           <PageHeader content="Contact" />
         </div>
         <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-[1280px] gap-8 pt-16 animate-apear">
-          <p className="font-imb text-xl">
+          <p className="font-imb md:text-xl">
             Feel free to contact me via: <CopySpan content="dcieszynski99@gmail.com" />
           </p>
         </div>
