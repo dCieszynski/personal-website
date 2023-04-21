@@ -13,7 +13,6 @@ function CopySpan({ content }: Props) {
   return (
     <span className="font-bold cursor-pointer hover:border-b-2 hover:border-black hover:pb-[1px]" onClick={() => copy(content)}>
       {content}
-      <MdOutlineDone />
       {copiedText && <MdOutlineDone title="Success" className="text-green-500 inline-block ml-2 border-none" />}
     </span>
   );
