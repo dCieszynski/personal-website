@@ -7,7 +7,7 @@ type Props = {
 
 function RowListRow({ elements }: Props) {
   return (
-    <div className="w-full md:w-[500px] flex flex-col md:flex-row justify-between gap-2 md:gap-0">
+    <div className="w-full md:w-[420px] flex flex-col md:flex-row justify-between gap-2 md:gap-0">
       {elements.map((element, index) => (
         <div key={index}>{element}</div>
       ))}
