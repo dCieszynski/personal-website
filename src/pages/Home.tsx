@@ -1,8 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from "react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Button from "../components/Button";
+import CopySpan from "../components/CopySpan";
 
 function Home() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [openContent, setOpenContent] = useState<string>("Contact");
+
+  const handleContactClick = () => {
+    setIsContactOpen(!isContactOpen);
+  };
+
+  const handleOpenContent = useCallback(() => {
+    if (!isContactOpen) return;
+    setOpenContent("Copied!");
+    setTimeout(() => {
+      setOpenContent("Contact");
+    }, 2000);
+  }, [isContactOpen]);
+
+  useEffect(() => {
+    handleOpenContent();
+  }, [handleOpenContent]);
+
   return (
     <main className="flex flex-col items-center gap-12">
       <div className="pt-8 flex flex-col">
@@ -17,8 +37,16 @@ function Home() {
         </h2>
       </div>
       <div className="flex flex-col gap-6 animate-move-from-left">
-        <Button content={<Link to="contact">Contact</Link>} />
+        <Button content={isContactOpen ? <CopySpan content="dcieszynski99@gmail.com" /> : <span>{openContent}</span>} onClick={handleContactClick} />
         <Button content={<a href="https://github.com/dCieszynski">View Github</a>} color="black" />
+      </div>
+      <div className="absolute bottom-4 right-4 text-2xl flex flex-col gap-2">
+        <a href="https://github.com/dCieszynski">
+          <AiFillGithub />
+        </a>
+        <a href="linkedin.com">
+          <AiFillLinkedin />
+        </a>
       </div>
     </main>
   );
