@@ -27,12 +27,12 @@ const project = {
       ],
     },
     {
-      name: "repolink",
+      name: "repository",
       title: "Repository Link",
       type: "url",
     },
     {
-      name: "livelink",
+      name: "live",
       title: "Live Link",
       type: "url",
     },
