@@ -2,11 +2,12 @@ import { screen, render } from "@testing-library/react";
 import ProjectCard from "../../../components/ProjectCard/ProjectCard";
 
 const project = {
-  title: "Paw",
+  name: "Paw",
   description: "Paw is a Tinder like app for adopting pets from animal shelters",
   repository: "",
   live: "",
   image: "",
+  alt: "",
 };
 
 describe("ProjectCard component", () => {

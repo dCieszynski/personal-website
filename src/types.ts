@@ -4,9 +4,10 @@ export type TLink = {
 };
 
 export type TProjectCardContext = {
-  title: string;
+  name: string;
   description: string;
   repository: string;
   live: string;
   image: string;
+  alt: string;
 };
