@@ -44,7 +44,7 @@ function Home() {
         <a href="https://github.com/dCieszynski">
           <AiFillGithub />
         </a>
-        <a href="linkedin.com">
+        <a href="https://www.linkedin.com/in/dawid-cieszy%C5%84ski-521853273/">
           <AiFillLinkedin />
         </a>
       </div>
