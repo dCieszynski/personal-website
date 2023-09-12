@@ -59,7 +59,7 @@ function About() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex justify-center max-w-[520px] animate-apear">
+          <div className="flex justify-center max-w-[480px] animate-apear">
             <img src={aboutUrl} alt="About Dawid Cieszyński" className="w-full h-full object-cover" />
           </div>
           {/* eslint-disable react/no-array-index-key */}
